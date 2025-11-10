@@ -21,7 +21,7 @@ O objetivo deste projeto é demonstrar a criação e manipulação de um banco d
 O diagrama abaixo representa o modelo relacional utilizado neste projeto.  
 Ele mostra as três tabelas principais (`usuarios`, `filmes` e `assistidos`) e seus relacionamentos por chaves estrangeiras:
 
-##Diagrama do Banco de Dados
+Diagrama do Banco de Dados
 <img width="837" height="338" alt="image" src="https://github.com/user-attachments/assets/afb926ba-38af-41d2-ad89-de4fcfc3617a" />
 
 
