@@ -1,22 +1,36 @@
 # Locadora_De_Filmes
 Nome: João Victor Seki, Nicolas Emanuel, Cauã Bolani
-
 # 🎬 Locadora de Filmes / Streaming (CRUD SQL)
 
-Este projeto apresenta um **banco de dados completo** de uma **locadora de filmes / serviço de streaming**, implementado em **MySQL**, com todas as operações básicas de **CRUD** — *Create, Read, Update e Delete*.
+Este projeto apresenta um **banco de dados completo** de uma **locadora de filmes / serviço de streaming**, desenvolvido em **MySQL**, implementando todas as operações do modelo **CRUD** (*Create, Read, Update e Delete*).
 
 ---
 
 ## 🧠 Objetivo
 
-O objetivo do projeto é demonstrar o uso de comandos SQL fundamentais em um exemplo prático e organizado, abordando:
+O objetivo deste projeto é demonstrar a criação e manipulação de um banco de dados relacional, aplicando conceitos de:
+- Modelagem de dados (entidades e relacionamentos)
+- Criação de tabelas com chaves primárias e estrangeiras
+- Comandos SQL básicos (CRUD)
+- Consultas com `JOIN`, `GROUP BY` e `ORDER BY`
 
-- Criação de banco de dados e tabelas  
-- Inserção de registros (`CREATE`)  
-- Consulta de dados (`READ`)  
-- Atualização de informações (`UPDATE`)  
-- Exclusão de registros (`DELETE`)  
-- Relacionamentos entre tabelas com **chaves estrangeiras**
+---
+
+## 🗺️ Diagrama do Banco de Dados
+
+O diagrama abaixo representa o modelo relacional utilizado neste projeto.  
+Ele mostra as três tabelas principais (`usuarios`, `filmes` e `assistidos`) e seus relacionamentos por chaves estrangeiras:
+
+![Diagrama do Banco de Dados]
+<img width="837" height="338" alt="image" src="https://github.com/user-attachments/assets/afb926ba-38af-41d2-ad89-de4fcfc3617a" />
+
+
+### 🔗 Relacionamentos:
+- **usuarios** ↔ **assistidos** → relação 1:N  
+  (um usuário pode assistir vários filmes)
+- **filmes** ↔ **assistidos** → relação 1:N  
+  (um filme pode ser assistido por vários usuários)
+- A tabela **assistidos** funciona como uma **tabela intermediária (N:N)** entre `usuarios` e `filmes`.
 
 ---
 
@@ -67,10 +81,10 @@ Registra quais filmes foram assistidos por quais usuários.
 ## ⚙️ Funcionalidades (CRUD)
 
 ### 🟢 **CREATE**
-Inserção de usuários, filmes e histórico de filmes assistidos.
+Inserção de usuários, filmes e registros de filmes assistidos.
 
 ```sql
 INSERT INTO usuarios (nome, email, plano) VALUES
 ('João Victor', 'joao@gmail.com', 'Premium'),
 ('Nicolas', 'nicolas@gmail.com', 'Padrão'),
-('Cauã', 'caua@gmail.com', 'Básico');
+('Cauã', 'caua@.gmailcom', 'Básico');
